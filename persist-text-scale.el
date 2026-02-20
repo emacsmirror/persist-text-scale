@@ -49,7 +49,6 @@
 ;;; Require
 
 (require 'face-remap)
-(require 'cl-lib)
 
 ;;; Defcustom
 
@@ -537,9 +536,7 @@ This function writes the text scale data to the file specified by
   (when persist-text-scale-history-length
     (persist-text-scale--sort)
     (setq persist-text-scale--data
-          (cl-subseq persist-text-scale--data
-                     (max 0 (- (length persist-text-scale--data)
-                               persist-text-scale-history-length))))))
+          (last persist-text-scale--data persist-text-scale-history-length))))
 
 ;;; Mode
 
