@@ -36,7 +36,6 @@ To install *persist-text-scale* from MELPA:
 
 ```emacs-lisp
 (use-package persist-text-scale
-  :ensure t
   :custom
   ;; Time interval, in seconds, between automatic saves of text scale data.
   ;; If set to an integer value, enables periodic autosaving of persisted text
