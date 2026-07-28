@@ -168,6 +168,19 @@ This is useful if you frequently switch between buffers or modes that have not b
 
 When enabled (`t`), `persist-text-scale` displays informative messages during text scale restoration. These messages indicate when and how the text scale was restored, which is useful for debugging or monitoring the package's behavior.
 
+## Integration
+
+### Consult
+
+To ensure that `consult` preview buffers correctly inherit the text scale of the original file, add the following snippet to your configuration:
+
+```emacs-lisp
+;; Ensure `consult' preview buffers can successfully record their filenames by
+;; allowing `persist-text-scale-restore' to run during the initial file load.
+(with-eval-after-load 'consult
+  (add-to-list 'consult-preview-allowed-hooks 'persist-text-scale-restore))
+```
+
 ## Author and License
 
 The *persist-text-scale* Emacs package has been written by [James Cherti](https://www.jamescherti.com/) and is distributed under terms of the GNU General Public License version 3, or, at your choice, any later version.
