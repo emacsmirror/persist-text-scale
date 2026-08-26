@@ -5,7 +5,7 @@
 ;; Author: James Cherti <https://www.jamescherti.com/contact/>
 ;; Version: 1.0.7
 ;; URL: https://github.com/jamescherti/persist-text-scale.el
-;; Keywords: convenience
+;; Keywords: convenience, faces
 ;; Package-Requires: ((emacs "26.1"))
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -55,7 +55,7 @@
 
 (defgroup persist-text-scale nil
   "Non-nil if persist-text-scale mode is enabled."
-  :group 'persist-text-scale
+  :group 'faces
   :prefix "persist-text-scale-")
 
 (defcustom persist-text-scale-file (expand-file-name "persist-text-scale"
